@@ -82,7 +82,8 @@ class TestScoreStars(unittest.TestCase):
         self.assertEqual(score_stars(75), 50)
 
     def test_high(self):
-        self.assertEqual(score_stars(500), 70)
+        self.assertEqual(score_stars(499), 70)
+        self.assertEqual(score_stars(500), 85)
 
     def test_very_high(self):
         self.assertEqual(score_stars(5000), 100)
@@ -100,6 +101,26 @@ class TestScoreActivity(unittest.TestCase):
 
     def test_stale(self):
         self.assertEqual(score_activity("2024-01-01T00:00:00Z"), 10)
+
+
+class TestCLI(unittest.TestCase):
+    def test_help_runs(self):
+        import subprocess
+        script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "ranking_audit.py")
+        r = subprocess.run([sys.executable, script, "--help"],
+                           capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("owner/repo", r.stdout)
+
+    def test_invalid_format_skipped(self):
+        import subprocess
+        script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "ranking_audit.py")
+        r = subprocess.run([sys.executable, script, "not-a-repo"],
+                           capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("Invalid format", r.stdout)
 
 
 if __name__ == "__main__":
