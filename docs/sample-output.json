@@ -1,0 +1,15 @@
+[
+  {
+    "repo": "facebook/react",
+    "scores": {
+      "name": 50,
+      "description": 100,
+      "topics": 100,
+      "readme": 100,
+      "stars": 100,
+      "activity": 100
+    },
+    "overall": 91,
+    "grade": "A"
+  }
+]
