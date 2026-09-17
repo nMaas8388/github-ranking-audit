@@ -86,3 +86,16 @@ Weighted sum of all signals.
 | C | 50-69 |
 | D | 30-49 |
 | F | 0-29 |
+
+## Reading the output
+
+A few patterns worth knowing when you compare two audits side by side:
+
+- The text signals (name, description, topics, README) account for 70% of the
+  score and are all editable today. The remaining 30% is stars and activity -
+  stars move slowly, activity just needs a push.
+- A perfect text score with 0 stars caps out below an A grade. Run the audit
+  against the current top result for your query to see how much of the gap is
+  traction rather than setup.
+- Re-score after each change. Name and description edits shift the total more
+  than README edits of the same size, because of their weighting.
