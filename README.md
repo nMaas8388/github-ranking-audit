@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/banner.svg" alt="GitHub Ranking Audit" width="720">
+</p>
+
+<p align="center">
   <a href="https://buygithub.com/?utm_source=github&utm_medium=readme&utm_campaign=github-ranking-audit">
     <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=3000&pause=1500&color=22D3EE&center=true&vCenter=true&width=500&lines=GitHub+Ranking+Audit;Check+Your+Repo's+Search+Signals;Name+%C2%B7+Topics+%C2%B7+README+%C2%B7+Stars" alt="GitHub Ranking Audit">
   </a>
